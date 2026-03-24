@@ -85,6 +85,43 @@ In operational terms, CPFS is intended to support:
 
 ## Usage *(coming soon)*
 
+### ECMWF SSL / corporate proxy notes
+
+If ECMWF download fails with `CERTIFICATE_VERIFY_FAILED`, configure one of these environment variables before running the ingest script:
+
+- `CPFS_USE_SYSTEM_TRUST_STORE`: `true`/`false` to trust OS certificate store via `truststore` (default: `true`). Recommended in Windows corporate environments.
+- `CPFS_CA_BUNDLE`: absolute path to your corporate CA certificate bundle (`.pem`/`.crt`).
+- `REQUESTS_CA_BUNDLE` or `SSL_CERT_FILE`: standard Python/Requests CA bundle variables (also supported).
+- `CPFS_ECMWF_VERIFY_SSL`: `true`/`false` toggle for SSL verification (default: `true`).
+- `CPFS_ECMWF_AVAILABILITY_LAG_HOURS`: hours to subtract from current UTC to pick the latest available ECMWF cycle (default: `4`).
+
+Recommended order:
+
+1. Keep `CPFS_ECMWF_VERIFY_SSL=true`.
+2. Use system trust store (default).
+3. If your company CA is still not trusted, set `CPFS_CA_BUNDLE` to your exported corporate root/intermediate certificate.
+
+Example in PowerShell:
+
+```powershell
+$env:CPFS_CA_BUNDLE = "C:\path\to\corp-ca.pem"
+c:/GitHub/CPFS/.venv/Scripts/python.exe scripts/run_ingest_ecmwf.py
+```
+
+Temporary workaround (not recommended for production):
+
+```powershell
+$env:CPFS_ECMWF_VERIFY_SSL = "false"
+c:/GitHub/CPFS/.venv/Scripts/python.exe scripts/run_ingest_ecmwf.py
+```
+
+Cycle selection example:
+
+```powershell
+$env:CPFS_ECMWF_AVAILABILITY_LAG_HOURS = "8"
+c:/GitHub/CPFS/.venv/Scripts/python.exe scripts/run_ingest_ecmwf.py
+```
+
 ---
 
 ## License *(coming soon)*

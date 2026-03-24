@@ -1,0 +1,22 @@
+Metadata-Version: 2.4
+Name: cpfs
+Version: 0.1.0
+Summary: Cuenca Precipitation Forecast System
+Author: Jonnathan
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: xarray
+Requires-Dist: cfgrib
+Requires-Dist: eccodes
+Requires-Dist: ecmwf-opendata
+Requires-Dist: netcdf4
+Requires-Dist: rioxarray
+Requires-Dist: rasterio
+Requires-Dist: pyproj
+Requires-Dist: scipy
+Requires-Dist: geopandas
+Requires-Dist: shapely
+Requires-Dist: fiona
+Requires-Dist: scikit-learn
+Requires-Dist: xgboost
+Requires-Dist: matplotlib

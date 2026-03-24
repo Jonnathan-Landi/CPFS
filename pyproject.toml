@@ -1,0 +1,32 @@
+[project]
+name = "cpfs"
+version = "0.1.0"
+description = "Cuenca Precipitation Forecast System"
+authors = [
+    {name = "Jonnathan"}
+]
+
+dependencies = [
+    "numpy",
+    "pandas",
+    "xarray",
+    "cfgrib",
+    "eccodes",
+    "ecmwf-opendata",
+    "netcdf4",
+    "rioxarray",
+    "rasterio",
+    "pyproj",
+    "scipy",
+    "geopandas",
+    "shapely",
+    "fiona",
+    "scikit-learn",
+    "xgboost",
+    "matplotlib",
+    "truststore",
+]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"

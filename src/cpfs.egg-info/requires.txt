@@ -1,0 +1,17 @@
+numpy
+pandas
+xarray
+cfgrib
+eccodes
+ecmwf-opendata
+netcdf4
+rioxarray
+rasterio
+pyproj
+scipy
+geopandas
+shapely
+fiona
+scikit-learn
+xgboost
+matplotlib
