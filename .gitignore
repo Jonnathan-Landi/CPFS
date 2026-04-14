@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+
+outputs/*.csv
+outputs/run_*.json
+outputs/latest_run.json

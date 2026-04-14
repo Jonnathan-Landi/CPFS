@@ -1,0 +1,16 @@
+{
+  "project_name": "RainForest",
+  "update_frequency_minutes": 30,
+  "horizons_hours": [1, 3, 6],
+  "paths": {
+    "zones_geojson": "zones/zones.geojson",
+    "latest_observations": "inputs/latest_observations.json",
+    "outputs_dir": "outputs"
+  },
+  "critical_inputs": ["zones_geojson"],
+  "event_thresholds_mm": {
+    "weak_max": 2.0,
+    "moderate_max": 8.0
+  },
+  "convective_threshold": 0.72
+}

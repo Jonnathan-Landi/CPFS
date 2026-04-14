@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-04-14T12:00:00Z",
+  "zones": [
+    {
+      "zone_id": "Zona_A",
+      "cloud_index": 0.78,
+      "humidity_index": 0.81,
+      "satellite_cold_cloud": 0.74,
+      "recent_rain_mm": 1.2
+    },
+    {
+      "zone_id": "Zona_B",
+      "cloud_index": 0.52,
+      "humidity_index": 0.63,
+      "satellite_cold_cloud": 0.41,
+      "recent_rain_mm": 0.2
+    }
+  ]
+}
