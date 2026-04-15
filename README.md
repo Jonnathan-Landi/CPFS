@@ -8,7 +8,7 @@
 
 <p align="center">
   <b>
-    Probabilistic short-term precipitation forecasting system for the canton of Cuenca
+    RainForest Phase 1: Probabilistic short-term precipitation nowcasting for Ecuador
   </b>
 </p>
 
@@ -29,15 +29,19 @@
 
 ## Introduction
 
-The **Cuenca Precipitation Forecast System (CPFS)** is a modular and scalable framework designed to estimate the probability of rainfall occurrence over the canton of Cuenca at short-term horizons (1–6 hours). The system is motivated by the need for high-resolution, operationally relevant precipitation forecasts in complex mountainous environments, where global numerical models alone are insufficient to capture local-scale variability.
+The **RainForest** module is the Phase 1 nowcasting core of this repository. In this stage, the system is configured to run with a **satellite-only data strategy** for **Ecuador**, producing operational outputs for short horizons (1 h, 3 h and 6 h).
 
-CPFS adopts a hybrid modeling paradigm that integrates:
+Phase 1 focuses on three products for each zone of interest:
 
-- **Numerical Weather Prediction (NWP)** outputs, primarily from ECMWF, providing large-scale atmospheric conditions and forecasted variables.  
-- **Satellite observations (GOES-19)**, enabling near real-time monitoring of cloud structure, evolution and convective development.  
-- **In-situ hydrometeorological observations**, supplying ground truth data and local context for model calibration and validation.  
+- Rain probability.
+- Expected precipitation intensity.
+- Event type (`Sin lluvia`, `Lluvia debil`, `Lluvia moderada`, `Convectivo intenso`).
 
-The central hypothesis of the system is that precipitation at short time scales can be better represented as a **probabilistic outcome conditioned on both forecasted atmospheric states and observed cloud dynamics**, rather than relying exclusively on deterministic model outputs.
+The operational domain boundary is defined by `assets/Ec/ecuador.shp` (EPSG:32717), and zones are spatially validated against that boundary before inference.
+
+At this stage, **in-situ station data is not required** by the RainForest inference pipeline.
+
+The central hypothesis of this first stage is that short-term precipitation behavior can be represented as a **probabilistic outcome driven by satellite-derived cloud and moisture signals**.
 
 From a methodological perspective, CPFS formulates rainfall prediction as a **supervised probabilistic classification problem**, where the objective is to estimate:
 
@@ -84,6 +88,23 @@ In operational terms, CPFS is intended to support:
 ---
 
 ## Usage *(coming soon)*
+
+### RainForest visual outputs
+
+Each RainForest run now produces visual forecast products in addition to tabular outputs.
+
+- Map by horizon for rain probability (1 h, 3 h, 6 h).
+- Map by horizon for expected intensity.
+- Map by horizon for event type (`Sin lluvia`, `Lluvia debil`, `Lluvia moderada`, `Convectivo intenso`).
+- Animated GIF per variable showing horizon progression.
+
+Spatial presentation uses:
+
+- Ecuador boundary as national base (`assets/Ec/ecuador.shp`).
+- Cuenca canton overlay (`assets/Canton/Cuenca.shp`) for local reference.
+- Forecast zones from `zones/zones.geojson`.
+
+Generated files are stored in `outputs/visuals/<run_id>/`, and the generated map/animation paths are written in `visual_products` inside each run JSON.
 
 ### ECMWF SSL / corporate proxy notes
 

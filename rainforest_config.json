@@ -1,5 +1,12 @@
 {
   "project_name": "RainForest",
+  "phase": "phase_1",
+  "data_mode": "satellite_only",
+  "domain": {
+    "name": "Ecuador",
+    "boundary_path": "assets/Ec/ecuador.shp",
+    "boundary_crs": "EPSG:32717"
+  },
   "update_frequency_minutes": 30,
   "horizons_hours": [1, 3, 6],
   "paths": {
@@ -7,10 +14,22 @@
     "latest_observations": "inputs/latest_observations.json",
     "outputs_dir": "outputs"
   },
-  "critical_inputs": ["zones_geojson"],
+  "critical_inputs": ["zones_geojson", "boundary_path"],
   "event_thresholds_mm": {
     "weak_max": 2.0,
     "moderate_max": 8.0
   },
-  "convective_threshold": 0.72
+  "convective_threshold": 0.72,
+  "spatial": {
+    "zones_input_crs": "EPSG:4326"
+  },
+  "visualization": {
+    "enabled": true,
+    "overlay_canton_path": "assets/Canton/Cuenca.shp",
+    "generate_animation": true,
+    "generate_video": true,
+    "video_fps": 2,
+    "dpi": 170,
+    "figure_size": [8, 8]
+  }
 }

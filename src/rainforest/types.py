@@ -8,9 +8,9 @@ from typing import List
 class ZoneObservation:
     zone_id: str
     cloud_index: float
-    humidity_index: float
+    moisture_index: float
     satellite_cold_cloud: float
-    recent_rain_mm: float
+    satellite_recent_rain_mm: float
 
 
 @dataclass

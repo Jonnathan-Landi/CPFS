@@ -7,25 +7,73 @@ from typing import Dict, List, Tuple
 from .types import ZoneObservation
 
 
-def read_zones(zones_geojson_path: str) -> List[str]:
+def read_zones(
+    zones_geojson_path: str,
+    ecuador_boundary_path: str | None = None,
+    zones_input_crs: str | None = None,
+) -> Tuple[List[str], List[str]]:
+    warnings: List[str] = []
     path = Path(zones_geojson_path)
     if not path.exists():
         raise FileNotFoundError(f"Zones file not found: {zones_geojson_path}")
 
-    with path.open("r", encoding="utf-8") as f:
-        data = json.load(f)
+    try:
+        import geopandas as gpd
+    except ModuleNotFoundError:
+        with path.open("r", encoding="utf-8") as f:
+            data = json.load(f)
+        zone_ids = []
+        for feature in data.get("features", []):
+            props = feature.get("properties", {})
+            zone_id = props.get("zone_id")
+            if zone_id:
+                zone_ids.append(str(zone_id))
 
-    zone_ids: List[str] = []
-    for feature in data.get("features", []):
-        props = feature.get("properties", {})
-        zone_id = props.get("zone_id")
-        if zone_id:
-            zone_ids.append(zone_id)
+        if ecuador_boundary_path:
+            warnings.append(
+                "geopandas not available; Ecuador boundary clipping skipped (install geopandas to enable)"
+            )
+    else:
+        zones_gdf = gpd.read_file(path)
+        if zones_gdf.empty:
+            raise ValueError("Zones file has no features.")
+
+        if "zone_id" not in zones_gdf.columns:
+            raise ValueError("No zone_id found in zones file.")
+
+        if zones_gdf.crs is None:
+            assumed_crs = zones_input_crs or "EPSG:4326"
+            zones_gdf = zones_gdf.set_crs(assumed_crs)
+            warnings.append(f"zones CRS missing; assuming {assumed_crs}")
+
+        if ecuador_boundary_path:
+            boundary_path = Path(ecuador_boundary_path)
+            if not boundary_path.exists():
+                raise FileNotFoundError(f"Ecuador boundary not found: {ecuador_boundary_path}")
+
+            boundary_gdf = gpd.read_file(boundary_path)
+            if boundary_gdf.empty:
+                raise ValueError("Ecuador boundary is empty.")
+            if boundary_gdf.crs is None:
+                raise ValueError("Ecuador boundary CRS is undefined.")
+
+            zones_in_boundary_crs = zones_gdf.to_crs(boundary_gdf.crs)
+            boundary_union = boundary_gdf.geometry.unary_union
+            mask = zones_in_boundary_crs.geometry.intersects(boundary_union)
+            outside = zones_in_boundary_crs.loc[~mask, "zone_id"].dropna().astype(str).tolist()
+            if outside:
+                warnings.append(
+                    "zones outside Ecuador boundary were excluded: " + ", ".join(sorted(set(outside)))
+                )
+
+            zones_gdf = zones_gdf.loc[mask.values].copy()
+
+        zone_ids = [str(zid) for zid in zones_gdf["zone_id"].dropna().tolist()]
 
     if not zone_ids:
-        raise ValueError("No zone_id found in zones file.")
+        raise ValueError("No valid zones remain after spatial validation.")
 
-    return zone_ids
+    return zone_ids, warnings
 
 
 def read_latest_observations(observations_path: str, zone_ids: List[str]) -> Tuple[str, List[ZoneObservation], List[str]]:
@@ -33,7 +81,7 @@ def read_latest_observations(observations_path: str, zone_ids: List[str]) -> Tup
     path = Path(observations_path)
 
     if not path.exists():
-        warnings.append("latest_observations file missing; using fallback synthetic observations")
+        warnings.append("latest_observations file missing; using fallback synthetic satellite observations")
         return "missing-input", _synthetic_observations(zone_ids), warnings
 
     with path.open("r", encoding="utf-8") as f:
@@ -50,13 +98,24 @@ def read_latest_observations(observations_path: str, zone_ids: List[str]) -> Tup
             observations.append(_fallback_zone(zone_id))
             continue
 
+        if "humidity_index" in source and "moisture_index" not in source:
+            warnings.append(
+                f"zone {zone_id}: humidity_index is deprecated, use moisture_index for satellite-only mode"
+            )
+        if "recent_rain_mm" in source and "satellite_recent_rain_mm" not in source:
+            warnings.append(
+                f"zone {zone_id}: recent_rain_mm is deprecated, use satellite_recent_rain_mm"
+            )
+
         observations.append(
             ZoneObservation(
                 zone_id=zone_id,
                 cloud_index=float(source.get("cloud_index", 0.5)),
-                humidity_index=float(source.get("humidity_index", 0.5)),
+                moisture_index=float(source.get("moisture_index", source.get("humidity_index", 0.5))),
                 satellite_cold_cloud=float(source.get("satellite_cold_cloud", 0.5)),
-                recent_rain_mm=float(source.get("recent_rain_mm", 0.0)),
+                satellite_recent_rain_mm=float(
+                    source.get("satellite_recent_rain_mm", source.get("recent_rain_mm", 0.0))
+                ),
             )
         )
 
@@ -72,7 +131,7 @@ def _fallback_zone(zone_id: str) -> ZoneObservation:
     return ZoneObservation(
         zone_id=zone_id,
         cloud_index=0.5,
-        humidity_index=0.55,
+        moisture_index=0.55,
         satellite_cold_cloud=0.45,
-        recent_rain_mm=0.0,
+        satellite_recent_rain_mm=0.0,
     )

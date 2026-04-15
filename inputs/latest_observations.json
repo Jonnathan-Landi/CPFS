@@ -2,18 +2,886 @@
   "timestamp_utc": "2026-04-14T12:00:00Z",
   "zones": [
     {
-      "zone_id": "Zona_A",
-      "cloud_index": 0.78,
-      "humidity_index": 0.81,
-      "satellite_cold_cloud": 0.74,
-      "recent_rain_mm": 1.2
+      "zone_id": "EC_0001",
+      "cloud_index": 0.286,
+      "moisture_index": 0.584,
+      "satellite_cold_cloud": 0.39,
+      "satellite_recent_rain_mm": 2.19
     },
     {
-      "zone_id": "Zona_B",
+      "zone_id": "EC_0002",
+      "cloud_index": 0.268,
+      "moisture_index": 0.599,
+      "satellite_cold_cloud": 0.4,
+      "satellite_recent_rain_mm": 2.4
+    },
+    {
+      "zone_id": "EC_0003",
+      "cloud_index": 0.245,
+      "moisture_index": 0.636,
+      "satellite_cold_cloud": 0.424,
+      "satellite_recent_rain_mm": 2.88
+    },
+    {
+      "zone_id": "EC_0004",
+      "cloud_index": 0.23,
+      "moisture_index": 0.665,
+      "satellite_cold_cloud": 0.445,
+      "satellite_recent_rain_mm": 3.27
+    },
+    {
+      "zone_id": "EC_0005",
+      "cloud_index": 0.236,
+      "moisture_index": 0.691,
+      "satellite_cold_cloud": 0.459,
+      "satellite_recent_rain_mm": 3.6
+    },
+    {
+      "zone_id": "EC_0006",
+      "cloud_index": 0.452,
+      "moisture_index": 0.504,
+      "satellite_cold_cloud": 0.322,
+      "satellite_recent_rain_mm": 1.01
+    },
+    {
+      "zone_id": "EC_0007",
+      "cloud_index": 0.442,
+      "moisture_index": 0.529,
+      "satellite_cold_cloud": 0.338,
+      "satellite_recent_rain_mm": 1.34
+    },
+    {
+      "zone_id": "EC_0008",
+      "cloud_index": 0.416,
+      "moisture_index": 0.571,
+      "satellite_cold_cloud": 0.364,
+      "satellite_recent_rain_mm": 1.88
+    },
+    {
+      "zone_id": "EC_0009",
+      "cloud_index": 0.326,
+      "moisture_index": 0.623,
+      "satellite_cold_cloud": 0.403,
+      "satellite_recent_rain_mm": 2.61
+    },
+    {
+      "zone_id": "EC_0010",
+      "cloud_index": 0.3,
+      "moisture_index": 0.65,
+      "satellite_cold_cloud": 0.421,
+      "satellite_recent_rain_mm": 2.96
+    },
+    {
+      "zone_id": "EC_0011",
+      "cloud_index": 0.277,
+      "moisture_index": 0.681,
+      "satellite_cold_cloud": 0.442,
+      "satellite_recent_rain_mm": 3.38
+    },
+    {
+      "zone_id": "EC_0012",
+      "cloud_index": 0.265,
+      "moisture_index": 0.713,
+      "satellite_cold_cloud": 0.462,
+      "satellite_recent_rain_mm": 3.8
+    },
+    {
+      "zone_id": "EC_0013",
+      "cloud_index": 0.268,
+      "moisture_index": 0.747,
+      "satellite_cold_cloud": 0.484,
+      "satellite_recent_rain_mm": 4.25
+    },
+    {
+      "zone_id": "EC_0014",
+      "cloud_index": 0.282,
+      "moisture_index": 0.78,
+      "satellite_cold_cloud": 0.506,
+      "satellite_recent_rain_mm": 4.69
+    },
+    {
+      "zone_id": "EC_0015",
+      "cloud_index": 0.308,
+      "moisture_index": 0.815,
+      "satellite_cold_cloud": 0.527,
+      "satellite_recent_rain_mm": 5.13
+    },
+    {
+      "zone_id": "EC_0016",
+      "cloud_index": 0.493,
+      "moisture_index": 0.541,
+      "satellite_cold_cloud": 0.344,
+      "satellite_recent_rain_mm": 1.48
+    },
+    {
+      "zone_id": "EC_0017",
+      "cloud_index": 0.471,
+      "moisture_index": 0.566,
+      "satellite_cold_cloud": 0.36,
+      "satellite_recent_rain_mm": 1.81
+    },
+    {
+      "zone_id": "EC_0018",
+      "cloud_index": 0.442,
+      "moisture_index": 0.597,
+      "satellite_cold_cloud": 0.381,
+      "satellite_recent_rain_mm": 2.23
+    },
+    {
+      "zone_id": "EC_0019",
+      "cloud_index": 0.42,
+      "moisture_index": 0.633,
+      "satellite_cold_cloud": 0.407,
+      "satellite_recent_rain_mm": 2.72
+    },
+    {
+      "zone_id": "EC_0020",
+      "cloud_index": 0.372,
+      "moisture_index": 0.665,
+      "satellite_cold_cloud": 0.427,
+      "satellite_recent_rain_mm": 3.13
+    },
+    {
+      "zone_id": "EC_0021",
+      "cloud_index": 0.342,
+      "moisture_index": 0.691,
+      "satellite_cold_cloud": 0.444,
+      "satellite_recent_rain_mm": 3.48
+    },
+    {
+      "zone_id": "EC_0022",
+      "cloud_index": 0.32,
+      "moisture_index": 0.723,
+      "satellite_cold_cloud": 0.465,
+      "satellite_recent_rain_mm": 3.9
+    },
+    {
+      "zone_id": "EC_0023",
+      "cloud_index": 0.308,
+      "moisture_index": 0.754,
+      "satellite_cold_cloud": 0.486,
+      "satellite_recent_rain_mm": 4.32
+    },
+    {
+      "zone_id": "EC_0024",
+      "cloud_index": 0.308,
+      "moisture_index": 0.785,
+      "satellite_cold_cloud": 0.507,
+      "satellite_recent_rain_mm": 4.73
+    },
+    {
+      "zone_id": "EC_0025",
+      "cloud_index": 0.319,
+      "moisture_index": 0.817,
+      "satellite_cold_cloud": 0.527,
+      "satellite_recent_rain_mm": 5.15
+    },
+    {
+      "zone_id": "EC_0026",
+      "cloud_index": 0.344,
+      "moisture_index": 0.849,
+      "satellite_cold_cloud": 0.55,
+      "satellite_recent_rain_mm": 5.59
+    },
+    {
+      "zone_id": "EC_0027",
+      "cloud_index": 0.374,
+      "moisture_index": 0.881,
+      "satellite_cold_cloud": 0.571,
+      "satellite_recent_rain_mm": 6.02
+    },
+    {
+      "zone_id": "EC_0028",
+      "cloud_index": 0.406,
+      "moisture_index": 0.906,
+      "satellite_cold_cloud": 0.59,
+      "satellite_recent_rain_mm": 6.37
+    },
+    {
+      "zone_id": "EC_0029",
+      "cloud_index": 0.557,
+      "moisture_index": 0.518,
+      "satellite_cold_cloud": 0.351,
+      "satellite_recent_rain_mm": 1.35
+    },
+    {
+      "zone_id": "EC_0030",
+      "cloud_index": 0.536,
+      "moisture_index": 0.548,
+      "satellite_cold_cloud": 0.364,
+      "satellite_recent_rain_mm": 1.69
+    },
+    {
+      "zone_id": "EC_0031",
+      "cloud_index": 0.513,
+      "moisture_index": 0.578,
+      "satellite_cold_cloud": 0.383,
+      "satellite_recent_rain_mm": 2.09
+    },
+    {
+      "zone_id": "EC_0032",
+      "cloud_index": 0.483,
+      "moisture_index": 0.61,
+      "satellite_cold_cloud": 0.404,
+      "satellite_recent_rain_mm": 2.51
+    },
+    {
+      "zone_id": "EC_0033",
+      "cloud_index": 0.449,
+      "moisture_index": 0.641,
+      "satellite_cold_cloud": 0.425,
+      "satellite_recent_rain_mm": 2.93
+    },
+    {
+      "zone_id": "EC_0034",
+      "cloud_index": 0.415,
+      "moisture_index": 0.672,
+      "satellite_cold_cloud": 0.446,
+      "satellite_recent_rain_mm": 3.35
+    },
+    {
+      "zone_id": "EC_0035",
+      "cloud_index": 0.385,
+      "moisture_index": 0.704,
+      "satellite_cold_cloud": 0.467,
+      "satellite_recent_rain_mm": 3.77
+    },
+    {
+      "zone_id": "EC_0036",
+      "cloud_index": 0.362,
+      "moisture_index": 0.735,
+      "satellite_cold_cloud": 0.488,
+      "satellite_recent_rain_mm": 4.18
+    },
+    {
+      "zone_id": "EC_0037",
+      "cloud_index": 0.35,
+      "moisture_index": 0.766,
+      "satellite_cold_cloud": 0.509,
+      "satellite_recent_rain_mm": 4.6
+    },
+    {
+      "zone_id": "EC_0038",
+      "cloud_index": 0.35,
+      "moisture_index": 0.798,
+      "satellite_cold_cloud": 0.53,
+      "satellite_recent_rain_mm": 5.02
+    },
+    {
+      "zone_id": "EC_0039",
+      "cloud_index": 0.362,
+      "moisture_index": 0.829,
+      "satellite_cold_cloud": 0.551,
+      "satellite_recent_rain_mm": 5.44
+    },
+    {
+      "zone_id": "EC_0040",
+      "cloud_index": 0.384,
+      "moisture_index": 0.861,
+      "satellite_cold_cloud": 0.571,
+      "satellite_recent_rain_mm": 5.86
+    },
+    {
+      "zone_id": "EC_0041",
+      "cloud_index": 0.414,
+      "moisture_index": 0.892,
+      "satellite_cold_cloud": 0.592,
+      "satellite_recent_rain_mm": 6.27
+    },
+    {
+      "zone_id": "EC_0042",
+      "cloud_index": 0.44,
+      "moisture_index": 0.914,
+      "satellite_cold_cloud": 0.609,
+      "satellite_recent_rain_mm": 6.58
+    },
+    {
+      "zone_id": "EC_0043",
+      "cloud_index": 0.584,
+      "moisture_index": 0.503,
+      "satellite_cold_cloud": 0.364,
+      "satellite_recent_rain_mm": 1.34
+    },
+    {
+      "zone_id": "EC_0044",
+      "cloud_index": 0.578,
+      "moisture_index": 0.527,
+      "satellite_cold_cloud": 0.386,
+      "satellite_recent_rain_mm": 1.71
+    },
+    {
+      "zone_id": "EC_0045",
+      "cloud_index": 0.556,
+      "moisture_index": 0.559,
+      "satellite_cold_cloud": 0.407,
+      "satellite_recent_rain_mm": 2.12
+    },
+    {
+      "zone_id": "EC_0046",
+      "cloud_index": 0.526,
+      "moisture_index": 0.59,
+      "satellite_cold_cloud": 0.428,
+      "satellite_recent_rain_mm": 2.54
+    },
+    {
+      "zone_id": "EC_0047",
+      "cloud_index": 0.491,
+      "moisture_index": 0.622,
+      "satellite_cold_cloud": 0.448,
+      "satellite_recent_rain_mm": 2.96
+    },
+    {
+      "zone_id": "EC_0048",
+      "cloud_index": 0.457,
+      "moisture_index": 0.653,
+      "satellite_cold_cloud": 0.469,
+      "satellite_recent_rain_mm": 3.38
+    },
+    {
+      "zone_id": "EC_0049",
+      "cloud_index": 0.427,
+      "moisture_index": 0.685,
+      "satellite_cold_cloud": 0.49,
+      "satellite_recent_rain_mm": 3.8
+    },
+    {
+      "zone_id": "EC_0050",
+      "cloud_index": 0.405,
+      "moisture_index": 0.716,
+      "satellite_cold_cloud": 0.511,
+      "satellite_recent_rain_mm": 4.22
+    },
+    {
+      "zone_id": "EC_0051",
+      "cloud_index": 0.393,
+      "moisture_index": 0.747,
+      "satellite_cold_cloud": 0.532,
+      "satellite_recent_rain_mm": 4.63
+    },
+    {
+      "zone_id": "EC_0052",
+      "cloud_index": 0.392,
+      "moisture_index": 0.779,
+      "satellite_cold_cloud": 0.553,
+      "satellite_recent_rain_mm": 5.05
+    },
+    {
+      "zone_id": "EC_0053",
+      "cloud_index": 0.404,
+      "moisture_index": 0.81,
+      "satellite_cold_cloud": 0.574,
+      "satellite_recent_rain_mm": 5.47
+    },
+    {
+      "zone_id": "EC_0054",
+      "cloud_index": 0.426,
+      "moisture_index": 0.842,
+      "satellite_cold_cloud": 0.595,
+      "satellite_recent_rain_mm": 5.89
+    },
+    {
+      "zone_id": "EC_0055",
+      "cloud_index": 0.456,
+      "moisture_index": 0.873,
+      "satellite_cold_cloud": 0.616,
+      "satellite_recent_rain_mm": 6.31
+    },
+    {
+      "zone_id": "EC_0056",
+      "cloud_index": 0.491,
+      "moisture_index": 0.9,
+      "satellite_cold_cloud": 0.637,
+      "satellite_recent_rain_mm": 6.69
+    },
+    {
+      "zone_id": "EC_0057",
+      "cloud_index": 0.525,
+      "moisture_index": 0.911,
+      "satellite_cold_cloud": 0.657,
+      "satellite_recent_rain_mm": 6.95
+    },
+    {
+      "zone_id": "EC_0058",
+      "cloud_index": 0.611,
+      "moisture_index": 0.485,
+      "satellite_cold_cloud": 0.388,
+      "satellite_recent_rain_mm": 1.38
+    },
+    {
+      "zone_id": "EC_0059",
+      "cloud_index": 0.605,
+      "moisture_index": 0.501,
+      "satellite_cold_cloud": 0.402,
+      "satellite_recent_rain_mm": 1.62
+    },
+    {
+      "zone_id": "EC_0060",
+      "cloud_index": 0.589,
+      "moisture_index": 0.524,
+      "satellite_cold_cloud": 0.427,
+      "satellite_recent_rain_mm": 2.01
+    },
+    {
+      "zone_id": "EC_0061",
+      "cloud_index": 0.566,
+      "moisture_index": 0.546,
+      "satellite_cold_cloud": 0.45,
+      "satellite_recent_rain_mm": 2.37
+    },
+    {
+      "zone_id": "EC_0062",
+      "cloud_index": 0.534,
+      "moisture_index": 0.575,
+      "satellite_cold_cloud": 0.472,
+      "satellite_recent_rain_mm": 2.77
+    },
+    {
+      "zone_id": "EC_0063",
+      "cloud_index": 0.5,
+      "moisture_index": 0.607,
+      "satellite_cold_cloud": 0.492,
+      "satellite_recent_rain_mm": 3.19
+    },
+    {
+      "zone_id": "EC_0064",
+      "cloud_index": 0.469,
+      "moisture_index": 0.638,
+      "satellite_cold_cloud": 0.513,
+      "satellite_recent_rain_mm": 3.61
+    },
+    {
+      "zone_id": "EC_0065",
+      "cloud_index": 0.447,
+      "moisture_index": 0.669,
+      "satellite_cold_cloud": 0.534,
+      "satellite_recent_rain_mm": 4.03
+    },
+    {
+      "zone_id": "EC_0066",
+      "cloud_index": 0.435,
+      "moisture_index": 0.701,
+      "satellite_cold_cloud": 0.555,
+      "satellite_recent_rain_mm": 4.45
+    },
+    {
+      "zone_id": "EC_0067",
+      "cloud_index": 0.435,
+      "moisture_index": 0.732,
+      "satellite_cold_cloud": 0.576,
+      "satellite_recent_rain_mm": 4.87
+    },
+    {
+      "zone_id": "EC_0068",
+      "cloud_index": 0.446,
+      "moisture_index": 0.764,
+      "satellite_cold_cloud": 0.597,
+      "satellite_recent_rain_mm": 5.28
+    },
+    {
+      "zone_id": "EC_0069",
+      "cloud_index": 0.469,
+      "moisture_index": 0.795,
+      "satellite_cold_cloud": 0.618,
+      "satellite_recent_rain_mm": 5.7
+    },
+    {
+      "zone_id": "EC_0070",
+      "cloud_index": 0.498,
+      "moisture_index": 0.826,
+      "satellite_cold_cloud": 0.639,
+      "satellite_recent_rain_mm": 6.12
+    },
+    {
+      "zone_id": "EC_0071",
+      "cloud_index": 0.528,
+      "moisture_index": 0.857,
+      "satellite_cold_cloud": 0.657,
+      "satellite_recent_rain_mm": 6.51
+    },
+    {
+      "zone_id": "EC_0072",
+      "cloud_index": 0.534,
+      "moisture_index": 0.898,
+      "satellite_cold_cloud": 0.662,
+      "satellite_recent_rain_mm": 6.87
+    },
+    {
+      "zone_id": "EC_0073",
+      "cloud_index": 0.59,
+      "moisture_index": 0.506,
+      "satellite_cold_cloud": 0.473,
+      "satellite_recent_rain_mm": 2.23
+    },
+    {
+      "zone_id": "EC_0074",
+      "cloud_index": 0.573,
+      "moisture_index": 0.515,
+      "satellite_cold_cloud": 0.495,
+      "satellite_recent_rain_mm": 2.47
+    },
+    {
+      "zone_id": "EC_0075",
+      "cloud_index": 0.542,
+      "moisture_index": 0.542,
+      "satellite_cold_cloud": 0.516,
+      "satellite_recent_rain_mm": 2.86
+    },
+    {
+      "zone_id": "EC_0076",
+      "cloud_index": 0.512,
+      "moisture_index": 0.574,
+      "satellite_cold_cloud": 0.536,
+      "satellite_recent_rain_mm": 3.28
+    },
+    {
+      "zone_id": "EC_0077",
+      "cloud_index": 0.489,
+      "moisture_index": 0.605,
+      "satellite_cold_cloud": 0.557,
+      "satellite_recent_rain_mm": 3.7
+    },
+    {
+      "zone_id": "EC_0078",
+      "cloud_index": 0.477,
+      "moisture_index": 0.637,
+      "satellite_cold_cloud": 0.578,
+      "satellite_recent_rain_mm": 4.12
+    },
+    {
+      "zone_id": "EC_0079",
+      "cloud_index": 0.477,
+      "moisture_index": 0.668,
+      "satellite_cold_cloud": 0.599,
+      "satellite_recent_rain_mm": 4.54
+    },
+    {
+      "zone_id": "EC_0080",
+      "cloud_index": 0.489,
+      "moisture_index": 0.699,
+      "satellite_cold_cloud": 0.62,
+      "satellite_recent_rain_mm": 4.96
+    },
+    {
+      "zone_id": "EC_0081",
+      "cloud_index": 0.511,
+      "moisture_index": 0.731,
+      "satellite_cold_cloud": 0.641,
+      "satellite_recent_rain_mm": 5.37
+    },
+    {
+      "zone_id": "EC_0082",
+      "cloud_index": 0.54,
+      "moisture_index": 0.762,
+      "satellite_cold_cloud": 0.661,
+      "satellite_recent_rain_mm": 5.79
+    },
+    {
+      "zone_id": "EC_0083",
+      "cloud_index": 0.552,
+      "moisture_index": 0.804,
+      "satellite_cold_cloud": 0.67,
+      "satellite_recent_rain_mm": 6.19
+    },
+    {
+      "zone_id": "EC_0084",
+      "cloud_index": 0.605,
+      "moisture_index": 0.456,
+      "satellite_cold_cloud": 0.522,
+      "satellite_recent_rain_mm": 2.23
+    },
+    {
+      "zone_id": "EC_0085",
+      "cloud_index": 0.584,
+      "moisture_index": 0.474,
+      "satellite_cold_cloud": 0.539,
+      "satellite_recent_rain_mm": 2.5
+    },
+    {
+      "zone_id": "EC_0086",
+      "cloud_index": 0.554,
+      "moisture_index": 0.505,
+      "satellite_cold_cloud": 0.56,
+      "satellite_recent_rain_mm": 2.92
+    },
+    {
+      "zone_id": "EC_0087",
+      "cloud_index": 0.532,
+      "moisture_index": 0.537,
+      "satellite_cold_cloud": 0.58,
+      "satellite_recent_rain_mm": 3.34
+    },
+    {
+      "zone_id": "EC_0088",
       "cloud_index": 0.52,
-      "humidity_index": 0.63,
-      "satellite_cold_cloud": 0.41,
-      "recent_rain_mm": 0.2
+      "moisture_index": 0.568,
+      "satellite_cold_cloud": 0.601,
+      "satellite_recent_rain_mm": 3.76
+    },
+    {
+      "zone_id": "EC_0089",
+      "cloud_index": 0.52,
+      "moisture_index": 0.6,
+      "satellite_cold_cloud": 0.622,
+      "satellite_recent_rain_mm": 4.18
+    },
+    {
+      "zone_id": "EC_0090",
+      "cloud_index": 0.531,
+      "moisture_index": 0.631,
+      "satellite_cold_cloud": 0.643,
+      "satellite_recent_rain_mm": 4.59
+    },
+    {
+      "zone_id": "EC_0091",
+      "cloud_index": 0.553,
+      "moisture_index": 0.663,
+      "satellite_cold_cloud": 0.664,
+      "satellite_recent_rain_mm": 5.01
+    },
+    {
+      "zone_id": "EC_0092",
+      "cloud_index": 0.574,
+      "moisture_index": 0.7,
+      "satellite_cold_cloud": 0.68,
+      "satellite_recent_rain_mm": 5.44
+    },
+    {
+      "zone_id": "EC_0093",
+      "cloud_index": 0.634,
+      "moisture_index": 0.412,
+      "satellite_cold_cloud": 0.544,
+      "satellite_recent_rain_mm": 2.04
+    },
+    {
+      "zone_id": "EC_0094",
+      "cloud_index": 0.626,
+      "moisture_index": 0.416,
+      "satellite_cold_cloud": 0.562,
+      "satellite_recent_rain_mm": 2.23
+    },
+    {
+      "zone_id": "EC_0095",
+      "cloud_index": 0.596,
+      "moisture_index": 0.447,
+      "satellite_cold_cloud": 0.583,
+      "satellite_recent_rain_mm": 2.64
+    },
+    {
+      "zone_id": "EC_0096",
+      "cloud_index": 0.574,
+      "moisture_index": 0.479,
+      "satellite_cold_cloud": 0.604,
+      "satellite_recent_rain_mm": 3.06
+    },
+    {
+      "zone_id": "EC_0097",
+      "cloud_index": 0.562,
+      "moisture_index": 0.51,
+      "satellite_cold_cloud": 0.624,
+      "satellite_recent_rain_mm": 3.48
+    },
+    {
+      "zone_id": "EC_0098",
+      "cloud_index": 0.562,
+      "moisture_index": 0.541,
+      "satellite_cold_cloud": 0.645,
+      "satellite_recent_rain_mm": 3.89
+    },
+    {
+      "zone_id": "EC_0099",
+      "cloud_index": 0.574,
+      "moisture_index": 0.573,
+      "satellite_cold_cloud": 0.666,
+      "satellite_recent_rain_mm": 4.31
+    },
+    {
+      "zone_id": "EC_0100",
+      "cloud_index": 0.593,
+      "moisture_index": 0.604,
+      "satellite_cold_cloud": 0.685,
+      "satellite_recent_rain_mm": 4.71
+    },
+    {
+      "zone_id": "EC_0101",
+      "cloud_index": 0.662,
+      "moisture_index": 0.386,
+      "satellite_cold_cloud": 0.587,
+      "satellite_recent_rain_mm": 2.18
+    },
+    {
+      "zone_id": "EC_0102",
+      "cloud_index": 0.639,
+      "moisture_index": 0.412,
+      "satellite_cold_cloud": 0.606,
+      "satellite_recent_rain_mm": 2.54
+    },
+    {
+      "zone_id": "EC_0103",
+      "cloud_index": 0.616,
+      "moisture_index": 0.443,
+      "satellite_cold_cloud": 0.627,
+      "satellite_recent_rain_mm": 2.96
+    },
+    {
+      "zone_id": "EC_0104",
+      "cloud_index": 0.604,
+      "moisture_index": 0.474,
+      "satellite_cold_cloud": 0.648,
+      "satellite_recent_rain_mm": 3.38
+    },
+    {
+      "zone_id": "EC_0105",
+      "cloud_index": 0.604,
+      "moisture_index": 0.506,
+      "satellite_cold_cloud": 0.668,
+      "satellite_recent_rain_mm": 3.79
+    },
+    {
+      "zone_id": "EC_0106",
+      "cloud_index": 0.616,
+      "moisture_index": 0.537,
+      "satellite_cold_cloud": 0.689,
+      "satellite_recent_rain_mm": 4.21
+    },
+    {
+      "zone_id": "EC_0107",
+      "cloud_index": 0.634,
+      "moisture_index": 0.563,
+      "satellite_cold_cloud": 0.707,
+      "satellite_recent_rain_mm": 4.56
+    },
+    {
+      "zone_id": "EC_0108",
+      "cloud_index": 0.686,
+      "moisture_index": 0.384,
+      "satellite_cold_cloud": 0.609,
+      "satellite_recent_rain_mm": 2.34
+    },
+    {
+      "zone_id": "EC_0109",
+      "cloud_index": 0.679,
+      "moisture_index": 0.407,
+      "satellite_cold_cloud": 0.629,
+      "satellite_recent_rain_mm": 2.69
+    },
+    {
+      "zone_id": "EC_0110",
+      "cloud_index": 0.659,
+      "moisture_index": 0.437,
+      "satellite_cold_cloud": 0.65,
+      "satellite_recent_rain_mm": 3.1
+    },
+    {
+      "zone_id": "EC_0111",
+      "cloud_index": 0.647,
+      "moisture_index": 0.468,
+      "satellite_cold_cloud": 0.671,
+      "satellite_recent_rain_mm": 3.51
+    },
+    {
+      "zone_id": "EC_0112",
+      "cloud_index": 0.647,
+      "moisture_index": 0.5,
+      "satellite_cold_cloud": 0.692,
+      "satellite_recent_rain_mm": 3.93
+    },
+    {
+      "zone_id": "EC_0113",
+      "cloud_index": 0.658,
+      "moisture_index": 0.531,
+      "satellite_cold_cloud": 0.712,
+      "satellite_recent_rain_mm": 4.35
+    },
+    {
+      "zone_id": "EC_0114",
+      "cloud_index": 0.68,
+      "moisture_index": 0.561,
+      "satellite_cold_cloud": 0.733,
+      "satellite_recent_rain_mm": 4.75
+    },
+    {
+      "zone_id": "EC_0115",
+      "cloud_index": 0.696,
+      "moisture_index": 0.579,
+      "satellite_cold_cloud": 0.744,
+      "satellite_recent_rain_mm": 4.99
+    },
+    {
+      "zone_id": "EC_0116",
+      "cloud_index": 0.703,
+      "moisture_index": 0.429,
+      "satellite_cold_cloud": 0.651,
+      "satellite_recent_rain_mm": 3.03
+    },
+    {
+      "zone_id": "EC_0117",
+      "cloud_index": 0.698,
+      "moisture_index": 0.462,
+      "satellite_cold_cloud": 0.673,
+      "satellite_recent_rain_mm": 3.48
+    },
+    {
+      "zone_id": "EC_0118",
+      "cloud_index": 0.689,
+      "moisture_index": 0.494,
+      "satellite_cold_cloud": 0.694,
+      "satellite_recent_rain_mm": 3.9
+    },
+    {
+      "zone_id": "EC_0119",
+      "cloud_index": 0.689,
+      "moisture_index": 0.525,
+      "satellite_cold_cloud": 0.715,
+      "satellite_recent_rain_mm": 4.31
+    },
+    {
+      "zone_id": "EC_0120",
+      "cloud_index": 0.7,
+      "moisture_index": 0.556,
+      "satellite_cold_cloud": 0.735,
+      "satellite_recent_rain_mm": 4.73
+    },
+    {
+      "zone_id": "EC_0121",
+      "cloud_index": 0.71,
+      "moisture_index": 0.574,
+      "satellite_cold_cloud": 0.748,
+      "satellite_recent_rain_mm": 4.98
+    },
+    {
+      "zone_id": "EC_0122",
+      "cloud_index": 0.721,
+      "moisture_index": 0.501,
+      "satellite_cold_cloud": 0.694,
+      "satellite_recent_rain_mm": 3.95
+    },
+    {
+      "zone_id": "EC_0123",
+      "cloud_index": 0.72,
+      "moisture_index": 0.532,
+      "satellite_cold_cloud": 0.713,
+      "satellite_recent_rain_mm": 4.35
+    },
+    {
+      "zone_id": "EC_0124",
+      "cloud_index": 0.728,
+      "moisture_index": 0.571,
+      "satellite_cold_cloud": 0.736,
+      "satellite_recent_rain_mm": 4.85
+    },
+    {
+      "zone_id": "EC_0125",
+      "cloud_index": 0.732,
+      "moisture_index": 0.592,
+      "satellite_cold_cloud": 0.752,
+      "satellite_recent_rain_mm": 5.15
+    },
+    {
+      "zone_id": "EC_0126",
+      "cloud_index": 0.737,
+      "moisture_index": 0.601,
+      "satellite_cold_cloud": 0.761,
+      "satellite_recent_rain_mm": 5.29
     }
   ]
 }

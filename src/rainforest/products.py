@@ -4,12 +4,17 @@ import csv
 import json
 from dataclasses import asdict
 from pathlib import Path
-from typing import List
+from typing import Dict, List, Optional
 
 from .types import ForecastRow, RunResult
 
 
-def write_outputs(outputs_dir: str, result: RunResult, source_timestamp: str) -> None:
+def write_outputs(
+    outputs_dir: str,
+    result: RunResult,
+    source_timestamp: str,
+    visual_products: Optional[Dict[str, object]] = None,
+) -> None:
     out_dir = Path(outputs_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -30,6 +35,7 @@ def write_outputs(outputs_dir: str, result: RunResult, source_timestamp: str) ->
         "source_timestamp_utc": source_timestamp,
         "warnings": result.warnings,
         "rows": [asdict(r) for r in result.rows],
+        "visual_products": visual_products or {},
     }
     json_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
 

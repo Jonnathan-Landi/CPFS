@@ -20,3 +20,4 @@ Requires-Dist: fiona
 Requires-Dist: scikit-learn
 Requires-Dist: xgboost
 Requires-Dist: matplotlib
+Requires-Dist: truststore

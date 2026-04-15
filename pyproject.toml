@@ -24,6 +24,9 @@ dependencies = [
     "scikit-learn",
     "xgboost",
     "matplotlib",
+    "pillow",
+    "moviepy",
+    "opencv-python",
     "truststore",
 ]
 
